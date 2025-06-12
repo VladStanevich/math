@@ -1,3 +1,46 @@
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    
+    header {
+        padding: 15px 10px;
+    }
+    
+    .tabs {
+        flex-wrap: wrap;
+        padding: 5px;
+    }
+    
+    .tab-btn {
+        padding: 8px 12px;
+        margin: 3px;
+        font-size: 12px;
+        border-radius: 5px;
+        flex: 1 1 calc(50% - 6px);
+    }
+    
+    .stage-content {
+        padding: 10px;
+    }
+    
+    .grade-section h2 {
+        font-size: 16px;
+        padding-bottom: 3px;
+    }
+    
+    .tiles {
+        gap: 5px;
+    }
+    
+    .tile {
+        padding: 8px 10px;
+        font-size: 12px;
+        flex: 1 1 calc(33% - 10px);
+        text-align: center;
+    }
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -86,3 +129,17 @@ h2 {
     bottom: 0;
     width: 100%;
 } */
+
+@media (min-width: 769px) {
+    .tabs {
+        flex-wrap: nowrap;
+    }
+    
+    .tab-btn {
+        flex: none;
+    }
+    
+    .tile {
+        flex: none;
+    }
+}
