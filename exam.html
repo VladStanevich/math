@@ -3,11 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Подготовка к экзаменам</title>
+    <title>Подготовка к экзамену по математике</title>
+    <link rel="stylesheet" href="exams.css">
 </head>
 <body>
-    <h1>Страница для подготовки к экзаменам</h1>
-    <p>Здесь будет контент для подготовки к экзаменам.</p>
-    <a href="index.html">Вернуться на главную</a>
+    <header>
+        <h1>Подготовка к экзамену по математике</h1>
+    </header>
+
+    <div class="tabs">
+        <button class="tab-btn" data-tab="preparation">Подготовка</button>
+        <button class="tab-btn active" data-tab="archive">Задания прошлых лет</button>
+    </div>
+
+    <!-- =================================== МАТЕРИАЛЫ ============================================ -->
+    <div id="preparation" class="stage-content">
+        <h2>Теоретические материалы</h2>
+        <div class="tiles">
+            <!-- <div class="tile" onclick="window.open('pdf/prep/algebra.pdf')">Алгебра</div> -->
+            <!-- <div class="tile" onclick="window.open('pdf/prep/geometry.pdf')">Геометрия</div> -->
+            <!-- <div class="tile" onclick="window.open('pdf/prep/trigonometry.pdf')">Тригонометрия</div> -->
+            <!-- <div class="tile" onclick="window.open('pdf/prep/calculus.pdf')">Математический анализ</div> -->
+        </div>
+
+        <h2 style="margin-top: 30px;">Тренировочные тесты</h2>
+        <div class="tiles">
+            <!-- <div class="tile" onclick="window.open('pdf/prep/test1.pdf')">Вариант 1</div> -->
+            <!-- <div class="tile" onclick="window.open('pdf/prep/test2.pdf')">Вариант 2</div> -->
+            <!-- <div class="tile" onclick="window.open('pdf/prep/test3.pdf')">Вариант 3</div> -->
+        </div>
+    </div>
+
+    <!-- ==================================== ЗАДАНИЯ ПРОШЛЫХ ЛЕТ   ====================================================== -->
+    <div id="archive" class="stage-content active">
+        
+        <div class="year-section">
+            <h2>2022/2023 учебный год</h2>
+            <div class="tiles">
+                <div class="tile" onclick="window.open('pdf/exams/ce_2023.pdf')">ЦЭ-2023</div>
+                <div class="tile" onclick="window.open('pdf/exams/rt_3_2023.pdf')">РТ-2023 3 этап</div>
+                <div class="tile" onclick="window.open('pdf/exams/rt_2_2023.pdf')">РТ-2023 2 этап</div>
+                <div class="tile" onclick="window.open('pdf/exams/rt_1_2023.pdf')">РТ-2023 1 этап</div>                
+            </div>
+        </div>
+
+        <div class="year-section">
+            <h2>2021/2022 учебный год</h2>
+            <div class="tiles">
+                <div class="tile" onclick="window.open('pdf/exams/ct_2022.pdf')">ЦЭ-2022</div>
+                <div class="tile" onclick="window.open('pdf/exams/rt_3_2022.pdf')">РТ-2022 3 этап</div>
+                <div class="tile" onclick="window.open('pdf/exams/rt_2_2022.pdf')">РТ-2022 2 этап</div>
+                <div class="tile" onclick="window.open('pdf/exams/rt_1_2022.pdf')">РТ-2022 1 этап</div>                
+            </div>
+        </div>
+
+    </div>
+
+    <script src="exams.js"></script>
 </body>
 </html>
