@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const tabs = document.querySelectorAll('.tab-btn');
     const contents = document.querySelectorAll('.stage-content');
 
