@@ -3,60 +3,186 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Подготовка к олимпиадам и экзаменам</title>
+    <title>Математика для школьников | Беларусь</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
             background-color: #f5f5f5;
         }
-        .container {
-            text-align: center;
-        }
-        h1 {
-            margin-bottom: 30px;
-            color: #333;
-        }
-        .button {
-            display: inline-block;
-            padding: 15px 30px;
-            margin: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
+        header {
+            background: linear-gradient(135deg, #2E8B57 0%, #1E90FF 100%);
             color: white;
-            background-color: #4CAF50;
+            padding: 25px 0;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .tagline {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .split-layout {
+            display: flex;
+            flex: 1;
+        }
+        .split-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .split-exams {
+            background-color: #E6F4EA;
+            color: #1a3e2c;
+        }
+        .split-olympiads {
+            background-color: #E6F0FA;
+            color: #1a2c3e;
+        }
+        .split-section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        .description {
+            margin: 0 auto 25px;
+            max-width: 80%;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
+            font-size: 16px;
+        }
+        .features {
+            text-align: left;
+            max-width: 80%;
+            margin: 0 auto 25px;
+            position: relative;
+            z-index: 2;
+        }
+        .features li {
+            margin-bottom: 8px;
+            list-style-type: none;
+            position: relative;
+            padding-left: 25px;
+        }
+        .features li:before {
+            content: "•";
+            color: #2E8B57;
+            font-size: 20px;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+        .split-olympiads .features li:before {
+            color: #1E90FF;
+        }
+        .split-btn {
+            padding: 12px 28px;
+            font-size: 16px;
+            background-color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            z-index: 2;
             border: none;
-            border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
         }
-        .button:hover {
-            background-color: #45a049;
+        .split-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
-        .button-olympiad {
-            background-color: #2196F3;
+        .split-exams .split-btn {
+            background-color: #2E8B57;
+            color: white;
         }
-        .button-olympiad:hover {
-            background-color: #0b7dda;
+        .split-olympiads .split-btn {
+            background-color: #1E90FF;
+            color: white;
         }
-        .button-exam {
-            background-color: #4CAF50;
+        .math-icon {
+            position: absolute;
+            opacity: 0.08;
+            font-size: 120px;
+            z-index: 1;
         }
-        .button-exam:hover {
-            background-color: #45a049;
+        @media (max-width: 768px) {
+            .split-layout {
+                flex-direction: column;
+            }
+            .split-section {
+                padding: 60px 20px;
+            }
+            header {
+                padding: 20px 15px;
+            }
+            .logo {
+                font-size: 24px;
+            }
+            .features {
+                max-width: 90%;
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Выберите тип подготовки</h1>
-        <a href="olymp.html" class="button button-olympiad">Подготовка к олимпиадам</a>
-        <a href="exam.html" class="button button-exam">Подготовка к экзаменам</a>
+    <header>
+        <div class="logo">Математика для школьников</div>
+        <div class="tagline">Полный комплект материалов для подготовки к экзаменам и олимпиадам</div>
+    </header>
+    <div class="split-layout">
+        <div class="split-section split-exams">
+            <div class="math-icon">∫∑π</div>
+            <h2>Экзамены</h2>
+            <p class="description">Системная подготовка к обязательным испытаниям:</p>
+            <ul class="features">
+                <li>Архив ЦЭ и ЦТ последних лет с подробными решениями</li>
+                <li>3 репетиционных теста каждого года с критериями оценивания</li>
+                <li>Тематические подборки по всем разделам программы</li>
+                <li>Специальные методички для интенсивной подготовки</li>
+                <li>Варианты с разбором типичных ошибок</li>
+            </ul>
+            <a href="exam.html" class="split-btn">Перейти к материалам</a>
+        </div>
+        <div class="split-section split-olympiads">
+            <div class="math-icon">αΩΔ</div>
+            <h2>Олимпиады</h2>
+            <p class="description">Материалы для участников Белорусской математической олимпиады:</p>
+            <ul class="features">
+                <li>Полные архивы заданий (2015-2024 гг.)</li>
+                <li>Отдельные сборники по этапам: школьный, районный, областной, республиканский</li>
+                <li>Разборы нестандартных методов решения</li>
+                <li>Рекомендации по подготовке для каждого класса (8-11)</li>
+                <li>Критерии оценки и типовые баллы</li>
+            </ul>
+            <a href="olymp.html" class="split-btn">Перейти к материалам</a>
+        </div>
     </div>
 </body>
 </html>
